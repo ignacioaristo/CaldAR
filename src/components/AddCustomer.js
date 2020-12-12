@@ -29,45 +29,57 @@ export class AddCustomer extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit} style={formStyle}>
-                <input 
-                    type='text' 
-                    name='type' 
-                    placeholder='Type of client' 
-                    value={this.state.type} 
-                    onChange={this.onChange}
-                />
-                <input 
-                    type='email' 
-                    name='email' 
-                    placeholder='Email' 
-                    value={this.state.email} 
-                    onChange={this.onChange}
-                />
-                <input 
-                    type='text' 
-                    name='address' 
-                    placeholder='Address' 
-                    value={this.state.address} 
-                    onChange={this.onChange}
-                />
-                <input 
-                    type='text' 
-                    name='buildings' 
-                    placeholder='Buildings' 
-                    value={this.state.buildings} 
-                    onChange={this.onChange}/>
-                <input type='submit' onClick={this.props.AddCustomer} value='Send' />
-            </form>
+            <div>
+                <h2>Add Customer Form:</h2>
+                <form onSubmit={this.onSubmit} style={formStyle}>
+                    <input 
+                        style={inputStyle}
+                        type='text' 
+                        name='type' 
+                        placeholder='Type of client' 
+                        value={this.state.type} 
+                        onChange={this.onChange}
+                    />
+                    <input 
+                        style={inputStyle}
+                        type='email' 
+                        name='email' 
+                        placeholder='Email' 
+                        value={this.state.email} 
+                        onChange={this.onChange}
+                    />
+                    <input 
+                        style={inputStyle}
+                        type='text' 
+                        name='address' 
+                        placeholder='Address' 
+                        value={this.state.address} 
+                        onChange={this.onChange}
+                    />
+                    <input 
+                        style={inputStyle}
+                        type='text' 
+                        name='buildings' 
+                        placeholder='Buildings' 
+                        value={this.state.buildings} 
+                        onChange={this.onChange}/>
+                    <input style={inputStyle} type='submit' onClick={this.props.AddCustomer} value='Send' />
+                </form>
+            </div>
         )
     }
 }
 
 const formStyle = {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-around',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    width: '25%',    
+}
+
+const inputStyle = {
+    margin: '5px'
 }
 
 
