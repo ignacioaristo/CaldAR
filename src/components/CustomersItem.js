@@ -23,7 +23,10 @@ export class CustomersItem extends Component {
                 <li>{this.props.customer.email}</li>
                 <li>{this.props.customer.address}</li>
                 <li>{this.props.customer.buildings}</li>
-                <button onClick={this.props.deleteCustomer.bind(this, this.props.customer.id)} style={deleteButton}>x</button>
+                <div>
+                    <button onClick={this.props.deleteCustomer.bind(this, this.props.customer.id)} style={editButton}>EDIT</button>
+                    <button onClick={this.props.deleteCustomer.bind(this, this.props.customer.id)} style={deleteButton}>x</button>
+                </div>
             </ul>
         )
     }
@@ -35,6 +38,13 @@ CustomersItem.propTypes = {
 
 const deleteButton = {
     backgroundColor: 'red',
+    borderRadius: '50%',
+    padding: '3px',
+    cursor: 'pointer'
+}
+
+const editButton = {
+    backgroundColor: 'green',
     borderRadius: '50%',
     padding: '3px',
     cursor: 'pointer'
