@@ -15,19 +15,27 @@ export class CustomersItem extends Component {
         }
     }
 
+    liStyle = () => {
+        return{
+            width: '16%',
+            textAlign: 'center'
+        }
+    }
+
     render() {
         return (
-            <ul style={this.ulStyle()}>            
-                <li>{this.props.customer.id}</li> 
-                <li>{this.props.customer.type}</li>                     
-                <li>{this.props.customer.email}</li>
-                <li>{this.props.customer.address}</li>
-                <li>{this.props.customer.buildings}</li>
-                <div>
-                    <button onClick={this.props.deleteCustomer.bind(this, this.props.customer.id)} style={editButton}>EDIT</button>
+            <ul style={this.ulStyle()}>   
+                <li style={this.liStyle()}>{this.props.customer.id}</li> 
+                <li style={this.liStyle()}>{this.props.customer.type}</li>                     
+                <li style={this.liStyle()}>{this.props.customer.email}</li>
+                <li style={this.liStyle()}>{this.props.customer.address}</li>
+                <li style={this.liStyle()}>{this.props.customer.buildings}</li>
+                <div style={this.liStyle()}>
+                    <button style={editButton}>EDIT</button>
                     <button onClick={this.props.deleteCustomer.bind(this, this.props.customer.id)} style={deleteButton}>x</button>
                 </div>
             </ul>
+        
         )
     }
 }

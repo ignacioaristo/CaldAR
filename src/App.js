@@ -3,6 +3,7 @@ import customers from './mocks/customers.json';
 import Customers from './components/Customers';
 import Header from './components/layout/Header';
 import AddCustomer from './components/AddCustomer';
+import {v4 as uuid} from "uuid"; 
 
 class App extends Component {
   state = {customers};
@@ -15,7 +16,7 @@ class App extends Component {
   // Add Customer
   addCustomer = ({id, type, email, address, buildings}) => {
     const newCustomer = {
-      id: 5,
+      id: uuid(),
       type,
       email,
       address,
