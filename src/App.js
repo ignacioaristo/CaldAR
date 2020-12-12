@@ -2,13 +2,27 @@ import { Component } from 'react';
 import customers from './mocks/customers.json';
 import Customers from './components/Customers';
 import Header from './components/layout/Header';
+import AddCustomer from './components/AddCustomer';
 
 class App extends Component {
   state = {customers};
 
-  //Delete Customer
+  // Delete Customer
   deleteCustomer = (id) =>{
     this.setState({customers: [...this.state.customers.filter(customer => customer.id !== id)]})
+  }
+
+  // Add Customer
+
+  addCustomer = ({id, type, email, address, buildings}) => {
+    const newCustomer = {
+      id: 5,
+      type,
+      email,
+      address,
+      buildings
+    }
+    this.setState({customers: [...this.state.customers, newCustomer]})
   }
 
   render() {
@@ -16,6 +30,7 @@ class App extends Component {
     <div className="App">
       <Header/>
       <Customers customers={this.state.customers} deleteCustomer={this.deleteCustomer}/>
+      <AddCustomer addCustomer={this.addCustomer}/>
     </div>
   )};
 }
