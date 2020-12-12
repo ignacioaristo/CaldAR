@@ -13,8 +13,6 @@ export class CustomersItem extends Component {
         }
     }
 
-   
-
     render() {
         return (
             <ul style={this.ulStyle()}>            

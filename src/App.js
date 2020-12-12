@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import customers from './mocks/customers.json';
 import Customers from './components/Customers';
+import Header from './components/layout/Header';
 
 class App extends Component {
   state = {customers};
@@ -13,6 +14,7 @@ class App extends Component {
   render() {
     return (
     <div className="App">
+      <Header/>
       <Customers customers={this.state.customers} deleteCustomer={this.deleteCustomer}/>
     </div>
   )};
