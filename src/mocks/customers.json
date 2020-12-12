@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "type":"particular",
+        "email":"jalentyev7@spiegel.de",
+        "address":"1 Bluejay Plaza",
+        "buildings": [81]
+    },
+    {
+        "id": 2,
+        "type":"bussiness",
+        "email":"leomssi@gmail.com",
+        "address":"Pellegrini 152",
+        "buildings": [15]
+    },
+    {
+        "id": 3,
+        "type":"particular",
+        "email":"jejey@jeje.com.ar",
+        "address":"Av. Paradise 157",
+        "buildings": [2]
+    }
+]
+
