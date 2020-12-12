@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   // Add Customer
-
   addCustomer = ({id, type, email, address, buildings}) => {
     const newCustomer = {
       id: 5,

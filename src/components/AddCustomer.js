@@ -29,7 +29,7 @@ export class AddCustomer extends Component {
 
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} style={formStyle}>
                 <input type='number' name='id' placeholder='Id Number' value={this.state.id} onChange={this.onChange}/>
                 <input type='text' name='type' placeholder='Type of client' value={this.state.type} onChange={this.onChange}/>
                 <input type='email' name='email' placeholder='Email' value={this.state.email} onChange={this.onChange}/>
@@ -40,5 +40,13 @@ export class AddCustomer extends Component {
         )
     }
 }
+
+const formStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap'
+}
+
 
 export default AddCustomer

@@ -8,8 +8,10 @@ export class CustomersItem extends Component {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
+        paddingBottom: '5px',
         listStyle:'none',
         backgroundColor:'lightblue',
+        borderBottom: '1px dotted black'
         }
     }
 
