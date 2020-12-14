@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <header>
-            <h1 style={{textAlign:'center', backgroundColor:'lightblue', textDecoration: 'underline'}}>Customers</h1>
+            <h1 style={TitleTitleStyle}>Customers</h1>
             <ul style={headerTitleStyle}>
                 <li style={liStyle}>ID Number</li>
                 <li style={liStyle}>Type of Client</li>
@@ -22,9 +22,19 @@ const headerTitleStyle = {
     justifyContent: 'space-around',
     paddingBottom: '5px',
     listStyle:'none',
-    backgroundColor:'lightblue',
-    borderBottom: '2px solid black',
-    fontWeight: 'bold'
+    borderBottom: '1px solid #e3e2e4',
+    fontWeight: 'bold',
+    color: '#f76723',
+    fontFamily: 'San Francisco, Helvetica, Arial, san-serif'
+    
+}
+
+const TitleTitleStyle = {
+    color: 'white',
+    backgroundColor: '#f76723',
+    padding: '40px 0 40px 40px',
+    fontWeight: '100',
+    fontFamily: 'San Francisco, Helvetica, Arial, san-serif'
     
 }
 

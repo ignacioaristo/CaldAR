@@ -27,12 +27,17 @@ class App extends Component {
 
   render() {
     return (
-    <div className="App">
+    <div style={boxStyle}>
       <Header/>
       <Customers customers={this.state.customers} deleteCustomer={this.deleteCustomer}/>
       <AddCustomer addCustomer={this.addCustomer}/>
     </div>
   )};
+}
+
+
+const boxStyle = {
+  boxShadow: '5px 10px 5px lightgrey'
 }
 
 export default App;
