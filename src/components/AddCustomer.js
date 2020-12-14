@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../styles/AddCustomers.css';
 
 export class AddCustomer extends Component {
     state = {
@@ -31,9 +32,9 @@ export class AddCustomer extends Component {
         return (
             <div>
                 <h2>Add Customer Form:</h2>
-                <form onSubmit={this.onSubmit} style={formStyle}>
+                <form onSubmit={this.onSubmit} className="formStyle">
                     <input 
-                        style={inputStyle}
+                        className="inputStyle"
                         type='text' 
                         name='type' 
                         placeholder='Type of client' 
@@ -41,7 +42,7 @@ export class AddCustomer extends Component {
                         onChange={this.onChange}
                     />
                     <input 
-                        style={inputStyle}
+                        className="inputStyle"
                         type='email' 
                         name='email' 
                         placeholder='Email' 
@@ -49,7 +50,7 @@ export class AddCustomer extends Component {
                         onChange={this.onChange}
                     />
                     <input 
-                        style={inputStyle}
+                        className="inputStyle"
                         type='text' 
                         name='address' 
                         placeholder='Address' 
@@ -57,30 +58,17 @@ export class AddCustomer extends Component {
                         onChange={this.onChange}
                     />
                     <input 
-                        style={inputStyle}
+                        className="inputStyle"
                         type='text' 
                         name='buildings' 
                         placeholder='Buildings' 
                         value={this.state.buildings} 
                         onChange={this.onChange}/>
-                    <input style={inputStyle} type='submit' onClick={this.props.AddCustomer} value='Send' />
+                    <input className="inputStyle" type='submit' onClick={this.props.AddCustomer} value='Send' />
                 </form>
             </div>
         )
     }
 }
-
-const formStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    width: '25%',    
-}
-
-const inputStyle = {
-    margin: '5px'
-}
-
 
 export default AddCustomer

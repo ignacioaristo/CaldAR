@@ -1,0 +1,25 @@
+.headerTitleStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    list-style:none;
+    border-bottom: 1px solid #e3e2e4;
+    font-weight: bold;
+    color: #f76723;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+
+.TitleTitleStyle {
+    color: white;
+    background: #f76723;
+    padding: 40px 0 40px 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+
+.liStyle {
+    width: 16%;
+    text-align: center
+}

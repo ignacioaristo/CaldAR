@@ -1,0 +1,12 @@
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.inputStyle {
+    margin: 5px;
+}
