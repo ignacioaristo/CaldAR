@@ -25,11 +25,23 @@ class App extends Component {
     this.setState({customers: [...this.state.customers, newCustomer]})
   }
 
+  // Update Customer
+  updateCustomer = (customerUpdate) => {
+    this.setState({
+      customers: [...this.state.customers.map(customer => {
+        if (customer.id === customerUpdate.id) {
+          customer = customerUpdate;
+        }
+        return customer;
+      })]
+    });
+  }
+
   render() {
     return (
     <div style={boxStyle}>
       <Header/>
-      <Customers customers={this.state.customers} deleteCustomer={this.deleteCustomer}/>
+      <Customers customers={this.state.customers} deleteCustomer={this.deleteCustomer} updateCustomer={this.updateCustomer}/>
       <AddCustomer addCustomer={this.addCustomer}/>
     </div>
   )};

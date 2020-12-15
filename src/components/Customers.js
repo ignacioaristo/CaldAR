@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 class Customers extends Component {
   render() {
     return this.props.customers.map((customer) => (
-        <CustomersItem key={customer.id} customer={customer} deleteCustomer={this.props.deleteCustomer}/>
+        <CustomersItem key={customer.id} customer={customer} deleteCustomer={this.props.deleteCustomer} updateCustomer={this.props.updateCustomer}/>
     ))}
 };
 

@@ -6,12 +6,12 @@ function Header() {
         <header>
             <h1 className="TitleTitleStyle">Customers</h1>
             <ul className="headerTitleStyle">
-                <li className="liStyle">ID Number</li>
-                <li className="liStyle">Type of Client</li>
-                <li className="liStyle">Email</li>
-                <li className="liStyle">Address</li>
-                <li className="liStyle">Buildings</li>
-                <li className="liStyle">Action</li>
+                <li className="liTitleStyle">ID Number</li>
+                <li className="liTitleStyle">Type of Client</li>
+                <li className="liTitleStyle">Email</li>
+                <li className="liTitleStyle">Address</li>
+                <li className="liTitleStyle">Buildings</li>
+                <li className="liTitleStyle">Action</li>
             </ul>
         </header>
     )
